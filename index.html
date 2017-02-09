@@ -16,6 +16,14 @@
         <div ng-include src="'templates/search.html'"></div>
         <div ng-include src="'templates/artists.html'"></div>
 
+        <div ng-controller="ControllerOne"></div>
+        <div ng-controller="ControllerTwo"></div>
+        <div ng-controller="ControllerHistorySearch">
+            <ul>
+                <li ng-repeat="searchTerm in history">{{ searchTerm }}</li>
+            </ul>
+        </div>
+
 
     </div>
 
@@ -28,6 +36,9 @@
     <script src="js/factories/SpotifyFactory.js"></script>
     <script src="js/controllers/SearchController.js"></script>
     <script src="js/controllers/ArtistsController.js"></script>
+    <script src="js/controllers/ControllerOne.js"></script>
+    <script src="js/controllers/ControllerTwo.js"></script>
+    <script src="js/controllers/ControllerHistorySearch.js"></script>
 
 </body>
 

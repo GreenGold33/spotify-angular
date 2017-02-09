@@ -1,7 +1,7 @@
 (function () {
 
   angular.module("spotifyApp")
-    .factory("SpotifyFactory", function($http, urlSearchArtists) {
+    .factory("SpotifyFactory", function($http, $rootScope, urlSearchArtists) {
 
       function searchArtist(searchQuery) {
 
@@ -11,6 +11,9 @@
         return $http.get(url)
                 .then(function(response) {
                   return response.data.artists.items;
+                })
+                .then( function(artists) {
+                  $rootScope.$broadcast('artistsDataReady', artists, searchQuery )
                 })
       }
 

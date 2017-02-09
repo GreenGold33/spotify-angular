@@ -9,7 +9,6 @@
       vm.searchArtist = function(e) {
         e.preventDefault()
         SpotifyFactory.searchArtist( vm.search )
-          .then( setRootScopeArtists )
       }
 
       function setRootScopeArtists(artists) {

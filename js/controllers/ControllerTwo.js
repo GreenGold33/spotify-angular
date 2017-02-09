@@ -1,12 +1,12 @@
 (function () {
 
   angular.module("spotifyApp")
-    .controller("ArtistsController", ArtistsController)
+    .controller("ControllerTwo", ControllerTwo)
 
-  function ArtistsController($scope){
+  function ControllerTwo($scope){
 
     $scope.$on('artistsDataReady', function (artists) {
-      console.log("from ArtistsController...")
+      console.log ("from ControllerTwo...")
       console.log (artists)
     });
 
