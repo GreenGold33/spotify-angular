@@ -9,6 +9,9 @@
         url = url.replace('<%ARTIST-NAME%>', searchQuery)
 
         return $http.get(url)
+                .then(function(response) {
+                  return response.data.artists.items;
+                })
       }
 
       function searchAlbums() {
