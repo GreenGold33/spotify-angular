@@ -12,32 +12,18 @@
 
 <body>
     <div class="container">
-        <h1>Spotify Finder Angular 🎶</h1>
+        <h1>Spotify Finder Angular</h1>
 
-        <div class="jumbotron" ng-controller="SearchController">
-            <h2>Search an artist...</h2>
-            <form action="" method="POST" class="form-inline" role="form" ng-submit="searchArtist($event)">
-                <div class="form-group">
-                    <label class="sr-only" for="">label</label>
-                    <input type="text" class="form-control" id="" placeholder="Input field" ng-model="search">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+        <div ng-include src="'templates/search.html'"></div>
+        <div ng-include src="'templates/artists.html'"></div>
 
-        <div class="jumbotron" ng-controller="ArtistsController" ng-show="artists.length">
-            <h2>Select an artist...</h2>
-            <form action="" method="POST" class="form-inline" role="form">
-                <div class="form-group">
-                    <select name="" id="">
-                      <option value="{{artist.id}}" ng-repeat="artist in artists">{{artist.name}}</option>
-                    </select>
-                </div>
-            </form>
-        </div>
 
     </div>
-    <script src="app.js"></script>
+    <script src="js/app.module.js"></script>
+    <script src="js/app.constants.js"></script>
+    <script src="js/factories/SpotifyFactory.js"></script>
+    <script src="js/controllers/SearchController.js"></script>
+    <script src="js/controllers/ArtistsController.js"></script>
 </body>
 
 </html>

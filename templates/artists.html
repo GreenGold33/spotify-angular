@@ -1,0 +1,10 @@
+<div class="jumbotron" ng-controller="ArtistsController" ng-show="artists.length">
+    <h2>Select an artist...</h2>
+    <form action="" method="POST" class="form-inline" role="form">
+        <div class="form-group">
+            <select name="" id="">
+              <option value="{{artist.id}}" ng-repeat="artist in artists">{{artist.name}}</option>
+            </select>
+        </div>
+    </form>
+</div>
