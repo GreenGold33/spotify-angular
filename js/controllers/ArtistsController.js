@@ -5,8 +5,8 @@
   function ArtistsController ($scope) {
     var vm = this
     $scope.$on('artistsDataReady', function (event, artists) {
-      console.log(artists)
       vm.artists = artists
+      vm.artists.unshift({ name: 'Select an artist...'})
     })
   }
 })()
