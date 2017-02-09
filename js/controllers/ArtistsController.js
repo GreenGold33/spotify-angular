@@ -1,15 +1,12 @@
 (function () {
+  angular.module('spotifyApp')
+    .controller('ArtistsController', ArtistsController)
 
-  angular.module("spotifyApp")
-    .controller("ArtistsController", ArtistsController)
-
-  function ArtistsController($scope){
-
-    $scope.$on('artistsDataReady', function (artists) {
-      console.log("from ArtistsController...")
-      console.log (artists)
-    });
-
+  function ArtistsController ($scope) {
+    var vm = this
+    $scope.$on('artistsDataReady', function (event, artists) {
+      console.log(artists)
+      vm.artists = artists
+    })
   }
-
 })()

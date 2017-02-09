@@ -6,28 +6,31 @@
     <title>Spotify Angular Demo</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-
+    <style>
+        #log-search {
+            padding:10px;
+            background: #FFF;
+            border:1px solid #CCC;
+            position: fixed;
+            top:10px;
+            right: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <h1>Spotify Finder Angular</h1>
 
+        <div ng-include src="'templates/history.html'"></div>
+
         <div ng-include src="'templates/search.html'"></div>
         <div ng-include src="'templates/artists.html'"></div>
-
-        <div ng-controller="ControllerOne"></div>
-        <div ng-controller="ControllerTwo"></div>
-        <div ng-controller="ControllerHistorySearch">
-            <ul>
-                <li ng-repeat="searchTerm in history">{{ searchTerm }}</li>
-            </ul>
-        </div>
-
 
     </div>
 
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
@@ -36,9 +39,7 @@
     <script src="js/factories/SpotifyFactory.js"></script>
     <script src="js/controllers/SearchController.js"></script>
     <script src="js/controllers/ArtistsController.js"></script>
-    <script src="js/controllers/ControllerOne.js"></script>
-    <script src="js/controllers/ControllerTwo.js"></script>
-    <script src="js/controllers/ControllerHistorySearch.js"></script>
+    <script src="js/controllers/HistorySearchController.js"></script>
 
 </body>
 

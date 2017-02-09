@@ -1,0 +1,6 @@
+<div id="log-search" ng-controller="HistorySearchController as vm">
+    <h4>History Search <small><a href="#" ng-click="vm.toggleShow()">{{ vm.showList ? '[hide]' : '[show]' }}</a></small></h4>
+    <ul ng-show="vm.showList">
+        <li ng-repeat="searchTerm in vm.history | unique">{{ searchTerm }}</li>
+    </ul>
+</div>

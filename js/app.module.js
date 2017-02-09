@@ -1,1 +1,3 @@
-angular.module("spotifyApp",[]);
+(function () {
+  angular.module('spotifyApp', ['angular.filter'])
+})()
